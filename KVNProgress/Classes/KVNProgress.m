@@ -61,6 +61,7 @@ static KVNProgressConfiguration *configuration;
 
 // UI
 @property (nonatomic, weak) IBOutlet UIImageView *contentView;
+@property (nonatomic, weak) IBOutlet UIImageView *centerImageView;
 @property (nonatomic, weak) IBOutlet UIView *circleProgressView;
 @property (nonatomic, weak) IBOutlet UILabel *statusLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
@@ -645,6 +646,9 @@ static KVNProgressConfiguration *configuration;
 	self.circleProgressView.layer.masksToBounds = YES;
 	self.circleProgressView.backgroundColor = [UIColor clearColor];
 	
+    // Setting the center image
+    self.centerImageView.image = self.configuration.centerImage;
+    
 	// Remove all previous added layers
 	[self removeAllSubLayersOfLayer:self.circleProgressView.layer];
 }

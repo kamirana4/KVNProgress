@@ -43,6 +43,9 @@ typedef NS_ENUM(NSUInteger, KVNProgressBackgroundType) {
 
 #pragma mark - Circle
 
+
+/** Center image inside the rotating circle of the background view. */
+@property (nonatomic, strong) UIImage *centerImage;
 /** Color of the circle stroke. */
 @property (nonatomic, strong) UIColor *circleStrokeForegroundColor;
 /** Background color of the circle stroke. Used only when view is showing with a progress circle. */
